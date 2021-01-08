@@ -1,0 +1,62 @@
+\section{Modulation}
+
+\subsection*{Sinusoidal Amplitude Modulation}
+Synchronous Demodulation: 
+
+$y(t)=cos(\om_c t)x(t)$
+
+$c'(t)=cos(\om_c t + \Delta \om t + \phi)$ (local carrier)
+
+$x_r(t)=x(t)cos(\Delta \om t + \phi)$
+
+Asynchronous Demodulation: 
+
+$ y(t)=cos(\om_c t)[x(t)+A]  $ ,   $A+x(t)>0$ 
+
+no DC component \to $\eta=\frac{E(x^2(t))}{E(x^2(t))+A^2}<\frac{1}{1+PAPR_x}$
+
+\subsection*{Quadrature Modulation}
+$y(t)=x_I(t)cos(\om_c t)-x_Q(t)sin(\om_c t)$
+
+$y(t)cos(\om_c t + \phi) \to LPF(\text{Gain}=2) \to x_I(t)cos(\phi)+x_Q(t)sin(\phi)$
+
+$-y(t)sin(\om_c t) \to LPF \to x_Q(t)$
+
+\subsection*{Single-Sideband Modulation}
+$x(t)=x_I(t)$
+
+$H_h(j\om)=\begin{cases} -j,& \om >0 \\ j,& \om<0 \end{cases}$ 
+
+$y_{USB}(t) \to X_Q(j\om)=X(j\om)H_h(j\om)$,   note the $\om_{c0}$ of LPF
+
+$y_{SSB}(t) \to X_Q(j\om)=-X(j\om)H_h(j\om)$
+
+spectrum efficiency: $\text{SSB}=\text{QM}=2 \times \text{AM}$
+
+\subsection*{Pulse-Amplitude Modulated Signals}
+$y(t)=\Sigma x(nT)p(t-nT)$,   $p(t)=Sa(\frac{\pi t}{T})+p_1(t)$ 
+
+$P_1(j\om)$ is real, $\om_M=\pm \frac{2\pi}{T}$, even, odd around $\frac{\pi}{T}$(ISI-free)
+
+\subsection*{Frequency Modulation}
+$y(t)=cos(\om_c t + \theta_c(t))$
+
+$\frac{\rd \theta_c(t)}{\rd t}=k_f x(t)$,   $x(t)=Acos(\om_m t)$
+
+$m_f=\frac{k_f A}{\om_m}$,   $y(t)=cos(\om_c t + m_f sin(\om_m t))$
+
+NB: $m_f << \frac{\pi}{2}$
+
+$y(t) \approx cos(\om_c t)-m_f (sin(\om_m t))(sin(\om_c t))=cos(\om_c t) + 0.5m_f cos(\om_c t + \om_m t) - 0.5m_f cos(\om_c t - \om_m t)$
+
+WM:
+
+\subsection*{Multiplexing and Multiple Access}
+
+
+
+
+
+
+
+
