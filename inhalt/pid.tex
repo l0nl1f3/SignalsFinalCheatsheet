@@ -27,11 +27,9 @@ Error transfer:$H_e(s) = \frac{1}{1+H_o(s)}$, close loop: $H(s) = \frac{H_o(s)}{
 
 
 \subsubsection*{Steady State Error}
-Assume the system to be steady system.
+Assume the system to be stable system.
 
-$\lim_{s\to 0}\int \frac{\rd f(t)}{\rd t}e^{-st}\rd t = \lim_{s\to 0}sF(s) - f(0)$
-
-$f(+\infty) - f(0) = \lim_{s\to 0} sf(s) - f(0)$
+$f(+\infty) = \lim_{s\to 0} sF(s)$
 
 $x(t) = \frac{t^k}{k!} u(t)$, $X(s) = s^{-(k+1)}$
 
@@ -42,11 +40,11 @@ type-$k$ system: limited non-zero $e_{ss}$ for $k$
 
 $H_p(s) = s^{-m} \hat H_p(s), H_c(s) = s^{-n} \hat H_c(s), 0< |\hat H_p(s)|, |\hat H_c(s)| < \infty $
 
-$e_ss = \frac{1}{s^{n+m} + \hat H_p(s)\hat H_c(s)} s^{k-(n+m)}$, type- $m+n$ system for tracking $x$
+$e_{ss} = \frac{1}{s^{n+m} + \hat H_p(s)\hat H_c(s)s^{k-(n+m)}} $, type- $m+n$ system for tracking $x$
 
 Similar analysis for interference suppression $I(s)$, type- $n$
 
-\subsubsection*{$H_c(s) = k_P$}
+\subsubsection*{1.$H_c(s) = k_P$}
 
 $x(t) = u(t)$
 
@@ -59,25 +57,26 @@ $H_p(s) = \frac{A}{s^2+a_1s+a_2}, H(s) = \frac{Ak_P}{s^2+a_1s+a_2} = \frac{Ak_P}
 $e_{ss} = \frac{a_2}{a_2 + k_PA}$
 $k_P$ increase $\Rightarrow$ damp decrease, enhance oscillation, less error
 
-\subsubsection*{$H_c(s) =\frac{k_I}{s}$}
+\subsubsection*{2.$H_c(s) =\frac{k_I}{s}$}
 
-$H_p(s) = \frac{A}{s+a}, H(s)=\frac{k_IA}{s^2+as+k_IA}, H_e(s) =\frac{s(s+a)}{s^2+as+k_IA}$, damping factor decrease to zero
+$H_p(s) = \frac{A}{s+a}, H(s)=\frac{k_IA}{s^2+as+k_IA}, H_e(s) =\frac{s(s+a)}{s^2+as+k_IA}$ 
+$k_I$ increase $\Rightarrow$ damping factor decrease to zero
 
 $x(t)=u(t)\rightarrow e_{ss} = 0, x(t) = tu(t)\rightarrow e_{ss} = \frac{a}{k_IA}$
 
-\subsubsection*{$H_c(s) = k_Ds$}
+\subsubsection*{3.$H_c(s) = k_Ds$}
 
 $H_p(s)=\frac{A}{s+a}, H(s)=\frac{k_DAs}{(k_DA+1)s+a}, H(s)=\frac{s+a}{(k_DA+1)s+a}$
 
 $x(t)=u(t), y(\infty)=0$ (can't track constant error)
 
-\subsubsection*{$H_c(s) = k_P+k_Ds$}
+\subsubsection*{4.$H_c(s) = k_P+k_Ds$}
 
 $H_p(s)=\frac{A}{s+a}, H(s)=\frac{(k_P+k_Ds)A}{(Ak_D+1)s+Ak_P+a}$
 
 $x(t)=u(t), y(\infty)=H(0)=\frac{k_PA}{a+k_PA}, y(0+)=\frac{k_DA}{1+k_DA}$
 
-\subsubsection*{$H_c(s) = k_P+\frac{k_I}{s}$ (lower ss error)}
+\subsubsection*{5.$H_c(s) = k_P+\frac{k_I}{s}$ (lower ss error)}
 
 $x(t)=u(t)\rightarrow e(\infty)=0; x(t) = tu(t)\rightarrow e(\infty) = \frac{a}{K_IA}$
 

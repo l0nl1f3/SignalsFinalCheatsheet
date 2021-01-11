@@ -45,10 +45,30 @@ $\frac{1}{|a|}X_1(\frac s a)=\mathcal L\{x_1(at)\}, \roc=aR_1=\{s|\frac s a \in 
 
 $X_1(s)X_2(s)=\mathcal L\{x_1(t) * x_2(t) \}, \roc \supseteq R_1\cap R_2$ (This equality may not hold if $R_1\cap R_2=\emptyset$)
 
-$sX(s)=\mathcal L{x'(t)}, \roc \supseteq R_1, X'(s)=\mathcal L\{-tx(t)\}, \roc = R_1$
+$sX(s)=\mathcal L\{x'(t)\}, \roc \supseteq R_1, X'(s)=\mathcal L\{-tx(t)\}, \roc = R_1$
 
 $\frac 1 sX(s)=\mathcal L\{\int_{-\infty}^t x(\tau)\rd \tau\}, \roc \supseteq (R\cap (\Re s>0))$
 
 \subsection*{Examples}
 
-$\mathcal L\{cos(\om_0 t) u(t)\} = \frac{s}{s^2+\om_0^2}, \mathcal L\{sin(\om_0 t) u(t)\} = \frac{\om_0}{s^2+\om_0^2}$
+$\mathcal L\{\cos(\om_0 t) u(t)\} = \frac{s}{s^2+\om_0^2}, \mathcal L\{\sin(\om_0 t) u(t)\} = \frac{\om_0}{s^2+\om_0^2}$
+
+\subsection*{Analysis}
+
+Casual $\to\roc=$ right-half plane
+
+Casual(Rational) $\leftrightarrow\roc=$ right-half plane
+
+LTI Stability $\leftrightarrow j\om-\text{axis}\subseteq\roc$
+
+Casual Stability $\leftrightarrow$ all poles have negative real part 
+
+\subsection*{Block Diagram}
+
+Direct: $H(s) = \frac{\sum b_is^i}{\sum a_is^i}$, \includegraphics[scale=0.2]{inhalt/direct.png}
+
+Parrallel: $H(s)=A\frac{\prod s-\alpha_i}{\prod s - \beta_i}$ \includegraphics[scale=0.2]{inhalt/Parallel.png}
+
+Cascade: $H(s) = \sum \frac{A_i}{s-a_i}$\includegraphics[scale=0.2]{inhalt/cascade.png}
+
+\subsection*{Unilateral Laplace}
