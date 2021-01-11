@@ -1,0 +1,41 @@
+\section{State-Space Analysis}
+\subsection*{CT}
+$[q_1(t),...,q_L(t)]^T=\boldsymbol{q}(t)$
+
+$\frac{\rd \boldsymbol{q}(t)}{\rd t}=\boldsymbol{Aq}(t)+\boldsymbol{b}x(t)$
+
+$y(t)=\boldsymbol{c^Tq}(t)+dx(t)$
+
+\subsection*{Stability}
+
+for LTI: Asymptotic Stable(about $\lambda_i$)=BIBO
+
+\subsection*{Modal Coordinates(CT for example)}
+
+$[\boldsymbol{v_1},...,\boldsymbol{v_L}]=\boldsymbol{V}$,   $\boldsymbol{A}$'s vectors
+
+$\boldsymbol{q}(t)=\boldsymbol{Vr}(t)$
+
+evolution:  
+
+$\boldsymbol{b}=\boldsymbol{V\beta}$
+
+$\frac{\rd r_i(t)}{\rd t}=\lambda_i r_i(t) + \beta_i x(t)$
+
+output:   
+
+$\boldsymbol{\zeta}=\boldsymbol{V^T c}$
+
+$y(t)=\boldsymbol{\zeta^Tr}(t)+dx(t)$
+
+\subsection*{Reachability}
+
+ith mode is reachable: $\beta_i \neq 0$
+
+Matrix: $\boldsymbol{R_L}=[\boldsymbol{A^{L-1}b}, ..., \boldsymbol{b}]$ is full rank
+
+\subsection*{Observability}
+
+ith mode is observable: $\zeta_i \neq 0$
+
+Matrix: $\boldsymbol{O_L}=\begin{bmatrix}c^T\\c^TA\\\ldots\\ c^TA^{L-1}\end{bmatrix}$   L rows
